@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <title>Animate on hover</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <style>
+    /* animation: name duration function count  */
+		.one {
+			position:absolute;
+            /* set animation to use the spin-it animation function */
+             animation: spin-it 3s linear infinite;
+             /*Pause animation on page load */
+             animation-play-state: paused; 
+		}
+		.one:hover {
+			/* Play animation on mouseover */
+            animation-play-state: running;
+		}
+
+        @keyframes spin-it {
+        /* spin it 2 turns in 3 seconds */
+          100% {transform: rotate(2turn); }
+        }
+		
+	</style>
+    </head>
+
+    <body>
+   
+        <p><img src="peace.png" class="one"></p>
+        
+    </body>
+</html>
